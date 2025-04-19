@@ -1,11 +1,26 @@
+'use client';
 import { Cpu, Zap } from 'lucide-react'
 import Image from 'next/image'
+import SplitText from './ui/split-text'
 
+const handleAnimationComplete= () =>{
+    console.log('All letters have animated!');
+}
 export default function ContentSection() {
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-                <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">The Lyra ecosystem brings together our models.</h2>
+            <SplitText
+                text="The Lyra ecosystem brings together our models."
+                className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl"
+                delay={50}
+                animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                easing="easeOutCubic"
+                threshold={0.2}
+                rootMargin="-50px"
+                onLetterAnimationComplete={handleAnimationComplete}
+                />
                 <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
                     <div className="relative space-y-4">
                         <p className="text-muted-foreground">
