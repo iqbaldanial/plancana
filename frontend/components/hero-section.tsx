@@ -42,13 +42,15 @@ export default function HeroSection() {
                 </div>
                 <section>
                     <div className="relative mx-auto max-w-6xl px-6 pt-32 lg:pb-16 lg:pt-48">
-                        <div className="relative z-10 mx-auto max-w-4xl text-center">
+                    <div className="flex flex-row gap-x-20">
+                            <div className="basis-2/3">
+                            <div className="relative z-10 mx-auto max-w-4xl text-center">
                             <TextEffect
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 as="h1"
                                 className="text-balance text-4xl font-medium sm:text-5xl md:text-6xl">
-                                Your gateway to endless entertainment experiences
+                                Revelotionize Your Agricultural Supply Chain Management
                             </TextEffect>
                             <TextEffect
                                 per="line"
@@ -57,7 +59,7 @@ export default function HeroSection() {
                                 delay={0.5}
                                 as="p"
                                 className="mx-auto mt-12 max-w-2xl text-pretty text-lg">
-                                Tailwindcss highly customizable components for building modern websites and applications that look and feel the way you mean it.
+                                Track, manage, and optimize your agricultural operations with complete transparency and real-time visibility
                             </TextEffect>
 
                             <AnimatedGroup
@@ -101,31 +103,13 @@ export default function HeroSection() {
                                 </form>
                             </AnimatedGroup>
                         </div>
-                        <div className="mx-auto md:-mt-20 lg:-mt-40">
-                            <AnimatedGroup
-                                variants={{
-                                    container: {
-                                        visible: {
-                                            transition: {
-                                                staggerChildren: 0.05,
-                                                delayChildren: 0.75,
-                                            },
-                                        },
-                                    },
-                                    ...transitionVariants,
-                                }}>
-                                <div className="-rotate-30 aspect-3/2 relative mx-auto lg:w-2/3">
-                                    <div className="bg-linear-to-b to-background from-background absolute inset-0 via-transparent"></div>
-                                    <div className="bg-linear-to-l to-background from-background absolute inset-0 via-transparent"></div>
-                                    <Image
-                                        src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605545/phone-backgroudn_xqgg5g.jpg"
-                                        alt="Phone Background"
-                                        width="6240"
-                                        height="4160"
-                                    />
-                                </div>
-                            </AnimatedGroup>
+                            </div>
+                            <div className="basis-2/3  bg-red-700 ">
+                                <div className=""></div>
+                            </div>
                         </div>
+                        
+                        
                     </div>
                 </section>
                 <LogoCloud />
