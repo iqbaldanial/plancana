@@ -2,6 +2,6 @@
 import { signOut } from '@/auth'
 import React from 'react'
 
-export async function github_LogOut() {
+export async function auth_LogOut() {
     await signOut({redirectTo: "/"})
 } 
