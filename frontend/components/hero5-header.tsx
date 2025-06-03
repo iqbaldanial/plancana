@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { useTheme } from 'next-themes'
+import Authsection from './auth_section'
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -15,7 +16,7 @@ const menuItems = [
 ]
 
 
-export const HeroHeader = () => {
+export const HeroHeader = ({session}: {session:any}) => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
     const {theme, setTheme} = useTheme();
@@ -80,33 +81,7 @@ export const HeroHeader = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Login</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Sign Up</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <Link href="#">
-                                        <span>Get Started</span>
-                                    </Link>
-                                </Button>
-                            </div>
+                            <Authsection session = {session} isScrolled ={isScrolled}/>
                             <div onClick={() => setTheme(isDark ? "light" : "dark")}
                                 >
                                 {isDark ? <Sun className="h-6 w-6 text-yellow-500 "/>

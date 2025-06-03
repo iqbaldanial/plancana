@@ -6,6 +6,7 @@ import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from '@/components/hero5-header'
 import { LogoCloud } from '@/components/logo-cloud'
 import Image from 'next/image'
+import Navbar from './navbar'
 
 const transitionVariants = {
     item: {
@@ -30,7 +31,7 @@ const transitionVariants = {
 export default function HeroSection() {
     return (
         <>
-            <HeroHeader />
+           
 
             <main className="overflow-hidden">
                 <div
