@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "cd ../prisma && npx prisma generate && cd ../backend && nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,8 +11,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv": "^16.5.0",
+    "@auth/prisma-adapter": "^2.9.1",
+    "@plancana/prisma-client": "file:../prisma",
+    "@prisma/client": "^6.9.0",
     "express": "^5.1.0",
-    "mongoose": "^8.14.1"
+    "prisma": "^6.9.0"
   }
 }
