@@ -1,7 +1,6 @@
 // app/api/auth/register/route.ts
 import { NextResponse } from 'next/server';
 import bcrypt from "bcryptjs";
-import { error } from 'console';
 import { PrismaClient } from '@prisma/client';
 
 
@@ -38,7 +37,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       { message: "User created", user }, 
-      { status: 201 }
+      { status: 200 }
     );
   } catch (error: any) {
   console.error("Registration Error:", error); 

@@ -1,5 +1,7 @@
 
 'use client'
+import { auth } from '@/auth';
+import { redirect } from 'next/dist/server/api-utils';
 // import ArcGISMap from '@/components/map'
 import dynamic from 'next/dynamic';
 
@@ -10,7 +12,7 @@ const ArcGISMap = dynamic(() => import('@/components/map'), {
   loading: () => <div className='text-2xl flex justify-center text-center px-80 py-80'>Loading map...</div>  // Loading state
 });
 
-const page = () => {
+const page =  () => {
   return (
     <>
     <div className='w-dvw h-dvh'>

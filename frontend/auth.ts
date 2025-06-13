@@ -5,8 +5,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
-const prisma = new PrismaClient();
 
+const prisma = new PrismaClient();
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -32,33 +32,40 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) {
+      async authorize(
+        credentials: Partial<Record<"email" | "password", unknown>>
+      ): Promise<any> {
+        const email = credentials.email as string | undefined;
+        const password = credentials.password as string | undefined;
+
+        if (!email || !password) {
           throw new Error("Missing email or password");
         }
 
         const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
+          where: { email },
         });
 
         if (!user || !user.hashedPassword) {
           throw new Error("User not found or missing password");
         }
 
-        const isValid = await bcrypt.compare(credentials.password as string, user.hashedPassword as string);
+        const isValid = await bcrypt.compare(password, user.hashedPassword);
+
         if (!isValid) {
           throw new Error("Invalid credentials");
         }
 
         return user;
       },
+
     }),
   ],
   session: {
-    strategy: "database", 
+    strategy: "database",
   },
   pages: {
     signIn: "/login",
-    signOut:"/" 
+    signOut: "/",
   },
 });

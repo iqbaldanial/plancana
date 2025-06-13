@@ -33,8 +33,8 @@ export function SignUpForm({
     e.preventDefault()
     try {
       const res = await axios.post("/api/auth/register", user)
-      if (res.status === 201) {
-        router.push("/login")
+      if (res.status === 200) {
+        router.push("/dashboard")
       }
     } catch (err: any) {
       console.error("Registration failed:", err.response?.data || err.message)
