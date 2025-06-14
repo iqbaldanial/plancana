@@ -9,17 +9,8 @@ import {
 } from "@/components/ui/sidebar"
 
 import data from "./data.json"
-import { auth } from "@/auth"
-import { redirect } from "next/navigation"
 
-export default async function Page() {
-
-  const session = await auth()
-
-  if(!session?.user){
-    redirect("/login")
-
-  }
+export default function Page() {
   return (
     <SidebarProvider
       style={
