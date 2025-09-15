@@ -1,8 +1,0 @@
-__turbopack_load_page_chunks__("/_error", [
-  "static/chunks/[root-of-the-server]__25339819._.js",
-  "static/chunks/node_modules_react-dom_4411d9bd._.js",
-  "static/chunks/node_modules_93c71284._.js",
-  "static/chunks/[root-of-the-server]__f6dd4d0c._.js",
-  "static/chunks/Documents_GitHub_plancana_frontend_pages__error_2da965e7._.js",
-  "static/chunks/turbopack-Documents_GitHub_plancana_frontend_pages__error_87e30bdf._.js"
-])
