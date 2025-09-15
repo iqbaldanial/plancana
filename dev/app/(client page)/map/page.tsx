@@ -1,7 +1,5 @@
 // app/map/page.tsx
 'use client'
-import { auth } from '@/auth';
-import { redirect } from 'next/dist/server/api-utils';
 // import ArcGISMap from '@/components/map'
 import dynamic from 'next/dynamic';
 
