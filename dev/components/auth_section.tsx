@@ -20,7 +20,7 @@ const Authsection = ({session,isScrolled} : Props) => {
                 <Button 
                 type='submit'
                 size="sm"
-                className="lg:inline-flex">
+                className="lg:inline-flex bg-transparent text-green-800">
                 <span>Logout</span>
             </Button>
 
@@ -28,8 +28,8 @@ const Authsection = ({session,isScrolled} : Props) => {
             <Button
                 asChild
                 size="sm"
-                className="lg:inline-flex">
-                <Link href={`/user/${session?.id}`}>
+                className="lg:inline-flex bg-green-800">
+                <Link href="/dashboard">
                 <span>{session?.user?.name}</span>
                 </Link>
             </Button>
@@ -55,7 +55,7 @@ const Authsection = ({session,isScrolled} : Props) => {
             <Button
                 asChild
                 size="sm"
-                className="lg:inline-flex">
+                className="lg:inline-flex bg-transparent text-green-800">
                 <Link href="/login">
                     <span>Sign In</span>
                 </Link>
@@ -63,7 +63,7 @@ const Authsection = ({session,isScrolled} : Props) => {
             <Button
                 asChild
                 size="sm"
-                className="lg:inline-flex">
+                className="lg:inline-flex bg-green-800">
                 <Link href="#">
                     <span>Get Started</span>
                 </Link>

@@ -55,7 +55,30 @@ model VerificationToken {
 model Crop {
   id          Int     @id @default(autoincrement())
   name        String
-  description String?
-  longitude   Float
-  latitude    Float
+  description String
+  createdAt   DateTime @default(now())
+  stages      CropStage[]
+}
+
+model CropStage {
+  id       Int     @id @default(autoincrement())
+  crop     Crop    @relation(fields: [cropId], references: [id])
+  cropId   Int
+  role     String  // "farmer", "processor", "distributor"
+  lat      Float
+  lng      Float
+  order    Int     // 0 = farmer, 1 = processor, etc
+  weather  Weather[]
+}
+
+model Weather {
+  id           Int        @id @default(autoincrement())
+  cropStage    CropStage  @relation(fields: [cropStageId], references: [id])
+  cropStageId  Int
+  temperature  Float
+  main         String     
+  description  String
+  humidity     Int
+  windSpeed    Float
+  recordedAt   DateTime   @default(now())
 }

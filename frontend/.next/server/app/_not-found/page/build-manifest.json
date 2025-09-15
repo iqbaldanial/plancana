@@ -1,0 +1,19 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_31de1f7c._.js",
+    "static/chunks/node_modules_next_dist_compiled_4ebde5ab._.js",
+    "static/chunks/node_modules_next_dist_client_97772695._.js",
+    "static/chunks/node_modules_next_dist_cfa7a6aa._.js",
+    "static/chunks/node_modules_@swc_helpers_cjs_433dce00._.js",
+    "static/chunks/Documents_GitHub_plancana_frontend_a0ff3932._.js",
+    "static/chunks/turbopack-Documents_GitHub_plancana_frontend_2c2ff1f3._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}

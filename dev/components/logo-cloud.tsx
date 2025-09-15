@@ -4,12 +4,12 @@ import { ProgressiveBlur } from './ui/progressive-blur'
 export const LogoCloud = () => {
     return (
         <section className="bg-background pb-16 md:pb-20">
-            <div className="group relative m-auto max-w-6xl px-6">
+            <div className="group relative w-full px-30">
                 <div className="flex flex-col items-center md:flex-row">
-                    <div className="inline md:max-w-44 md:border-r md:pr-6">
-                        <p className="text-end text-sm">Powering the best teams</p>
+                    <div className="inline md:max-w-44 md:border-r md:pr-6 mt-20">
+                        <p className="text-end text-sm ">Powering the best teams</p>
                     </div>
-                    <div className="relative py-6 md:w-[calc(100%-11rem)]">
+                    <div className="relative py-6 md:w-[calc(100%-11rem)] mt-20">
                         <InfiniteSlider
                             speedOnHover={20}
                             speed={40}
