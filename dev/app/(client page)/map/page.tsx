@@ -1,4 +1,4 @@
-
+// app/map/page.tsx
 'use client'
 import { auth } from '@/auth';
 import { redirect } from 'next/dist/server/api-utils';
@@ -12,7 +12,7 @@ const ArcGISMap = dynamic(() => import('@/components/map'), {
   loading: () => <div className='text-2xl flex justify-center text-center px-80 py-80'>Loading map...</div>  // Loading state
 });
 
-const page =  () => {
+const page = () => {
   return (
     <>
     <div className='w-dvw h-dvh'>

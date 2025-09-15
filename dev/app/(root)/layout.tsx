@@ -1,5 +1,5 @@
 
-import { auth } from "@/auth";
+import { auth } from "@/app/api/auth/auth";
 import { HeroHeader } from "@/components/hero5-header";
 import { main } from "motion/react-client";
 

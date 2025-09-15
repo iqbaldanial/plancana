@@ -1,12 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from './logo'
+
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { useTheme } from 'next-themes'
 import Authsection from './auth_section'
+import { Logo } from './logo'
+import Image from 'next/image';
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -41,7 +43,8 @@ export const HeroHeader = ({session}: {session:any}) => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <Logo />
+                                {/* <Logo /> */}
+                                <Image src="/plancana-logo.svg" alt="plancana logo" width={120} height={120} />
                             </Link>
 
                             <button

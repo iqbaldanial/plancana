@@ -41,23 +41,18 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: IconDashboard,
-    },
-    {
       title: "Map",
       url: "/map",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
-      url: "#",
+      title: "Batch Registration",
+      url: "/batch-registration",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
-      url: "#",
+      title: "Batch History",
+      url: "/batch-list",
       icon: IconFolder,
     },
     {
@@ -163,7 +158,7 @@ export function AppSidebar({ session,...props }: AppSidebarProps) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <a href="/dashboard">
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">Plancana</span>
               </a>

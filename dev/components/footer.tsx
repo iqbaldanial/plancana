@@ -123,12 +123,12 @@ const links = [
 
 export default function FooterSection() {
     return (
-        <footer className="border-b bg-white pt-20 dark:bg-transparent">
+        <footer className="border-b bg-green-50 pt-20 dark:bg-transparent">
             <div className="mb-8 border-b md:mb-12">
                 <div className="mx-auto flex max-w-5xl flex-wrap items-end justify-between gap-6 px-6 pb-6">
                     <Link
                         href="/"
-                        aria-label="go home"
+                        aria-label="go home" 
                         className="block size-fit">
                         <Logo />
                     </Link>

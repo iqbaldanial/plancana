@@ -79,7 +79,7 @@ export function NavUser({session}:{session:any}) {
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <IconUserCircle />
-                Account
+                <a href="/profile">Account</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <IconCreditCard />
